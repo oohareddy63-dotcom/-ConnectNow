@@ -1,0 +1,13 @@
+services:
+  # Backend Service
+  - type: web
+    name: backend
+    env: node
+    nodeVersion: 18
+    buildCommand: "npm install && npm rebuild bcrypt"
+    startCommand: "npm start"
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: MONGO_URI
+        sync: false
