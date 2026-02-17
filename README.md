@@ -274,14 +274,7 @@ ConnectNow/
 
 ## 🚀 Deployment
 
-### Production Environment Variables
-```bash
-# Backend .env
-PORT=8000
-MONGODB_URI=mongodb://localhost:27017/connectnow
-JWT_SECRET=your-super-secret-jwt-key
-NODE_ENV=production
-```
+
 
 ### Deployment Options
 
