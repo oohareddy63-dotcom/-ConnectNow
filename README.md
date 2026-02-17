@@ -421,14 +421,6 @@ npm install
 
 ---
 
-## 📞 Support & Community
-
-- **📧 Email**: support@connectnow.dev
-- **💬 Discord**: [Join our community](https://discord.gg/connectnow)
-- **🐛 Issues**: [GitHub Issues](https://github.com/your-repo/connectnow/issues)
-- **📖 Documentation**: [Full docs](https://docs.connectnow.dev)
-- **🎥 Tutorials**: [YouTube Channel](https://youtube.com/connectnow)
-
 ---
 
 ## 🗺️ Roadmap
@@ -471,7 +463,7 @@ npm install
 
 **⭐ Star this repo if it helped you!**
 
-Made with ❤️ by the ConnectNow Team
+Made with ❤️ by Ooha reddy
 
 [![Built with love](https://img.shields.io/badge/Built%20with-❤️-red?style=for-the-badge)](https://github.com/your-repo/connectnow)
 
