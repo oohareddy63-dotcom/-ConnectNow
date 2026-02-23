@@ -347,7 +347,7 @@ npm test
 ```
 
 ### Integration Testing
-```bash
+bash
 # API endpoint testing
 curl http://localhost:8000/api/test
 
