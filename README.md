@@ -4,7 +4,7 @@
 
 ![ConnectNow Logo](https://img.shields.io/badge/ConnectNow-Video%20Conferencing-blue?style=for-the-badge&logo=video&logoColor=white)
 
-[![License](https://img.shields.io/badge/license-ISC-green?style=for-the-badge)](LICENSE)
+
 [![Node.js](https://img.shields.io/badge/node.js-18%2B-green?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![React](https://img.shields.io/badge/react-18.2.0-blue?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
 [![MongoDB](https://img.shields.io/badge/mongodb-8.0.3-green?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
