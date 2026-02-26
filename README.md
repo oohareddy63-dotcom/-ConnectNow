@@ -125,7 +125,6 @@ ConnectNow is a cutting-edge video conferencing platform designed to provide sea
 #### Windows PowerShell
 ```powershell
 .\setup-complete.ps1
-```
 
 #### Windows Batch
 ```cmd
