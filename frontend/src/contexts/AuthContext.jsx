@@ -30,12 +30,27 @@ export const AuthProvider = ({ children }) => {
                 password: password
             })
 
-
             if (request.status === httpStatus.CREATED) {
                 return request.data.message;
             }
         } catch (err) {
-            throw err;
+            // Handle specific error responses
+            if (err.response) {
+                // Server responded with error status
+                if (err.response.status === httpStatus.CONFLICT || err.response.status === 409) {
+                    throw new Error("User already exists. Please use a different username.");
+                } else if (err.response.data && err.response.data.message) {
+                    throw new Error(err.response.data.message);
+                } else {
+                    throw new Error("Registration failed. Please try again.");
+                }
+            } else if (err.request) {
+                // Request made but no response
+                throw new Error("Cannot connect to server. Please check your connection.");
+            } else {
+                // Something else happened
+                throw new Error(err.message || "Registration failed");
+            }
         }
     }
 
@@ -54,7 +69,25 @@ export const AuthProvider = ({ children }) => {
                 router("/home")
             }
         } catch (err) {
-            throw err;
+            // Handle specific error responses
+            if (err.response) {
+                // Server responded with error status
+                if (err.response.status === httpStatus.NOT_FOUND || err.response.status === 404) {
+                    throw new Error("User not found. Please check your username.");
+                } else if (err.response.status === httpStatus.UNAUTHORIZED || err.response.status === 401) {
+                    throw new Error("Invalid password. Please try again.");
+                } else if (err.response.data && err.response.data.message) {
+                    throw new Error(err.response.data.message);
+                } else {
+                    throw new Error("Login failed. Please try again.");
+                }
+            } else if (err.request) {
+                // Request made but no response
+                throw new Error("Cannot connect to server. Please check your connection.");
+            } else {
+                // Something else happened
+                throw new Error(err.message || "Login failed");
+            }
         }
     }
 
