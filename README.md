@@ -391,6 +391,5 @@ We welcome contributions! Please follow our guidelines:
 
 Made with ❤️ by Ooha reddy
 
-[![Built with love](https://img.shields.io/badge/Built%20with-❤️-red?style=for-the-badge)](https://github.com/your-repo/connectnow)
 
 </div>
