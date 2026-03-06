@@ -117,51 +117,58 @@ ConnectNow is a cutting-edge video conferencing platform designed to provide sea
 
 ### Prerequisites
 - **Node.js** v18 or higher
-- **MongoDB** Community Server or MongoDB Atlas
+- **MongoDB Atlas** account (or local MongoDB)
 - **Git** (optional)
 
-### ⚡ One-Click Setup (Recommended)
+### ⚡ MongoDB Atlas Setup (Recommended)
 
-#### Windows PowerShell
-```powershell
-.\setup-complete.ps1
-```
+**ConnectNow is now configured to use MongoDB Atlas!**
 
-#### Windows Batch
-```cmd
-setup-complete.bat
-```
+1. **Configure Database Connection**
+   - Open `backend/.env`
+   - Replace `<db_password>` with your MongoDB Atlas password
+   ```
+   MONGO_URI=mongodb+srv://oohareddy6362_db_user:YOUR_PASSWORD@connectnow.g1feftw.mongodb.net/connectnow?retryWrites=true&w=majority&appName=Connectnow
+   ```
+
+2. **Whitelist Your IP** (MongoDB Atlas)
+   - Go to MongoDB Atlas → Network Access
+   - Add your IP address or use `0.0.0.0/0` for development
+
+3. **Install Dependencies**
+   ```bash
+   npm run install-all
+   ```
+
+4. **Verify Setup**
+   ```bash
+   npm run verify
+   ```
+
+5. **Start Application**
+   - **Easy Way**: Double-click `start-dev.bat`
+   - **Manual Way**: See below
+
+📚 **Detailed Instructions**: See [QUICK-START.md](QUICK-START.md) or [SETUP-INSTRUCTIONS.txt](SETUP-INSTRUCTIONS.txt)
 
 ### 🔧 Manual Setup
 
-1. **Start MongoDB**
-```bash
-mkdir data
-mongod --dbpath ./data --port 27017
-```
-
-2. **Install Dependencies**
+1. **Install Dependencies**
 ```bash
 # Backend
 cd backend
 npm install
 
 # Frontend
-cd ../frontend
+cd frontend
 npm install
 ```
 
-3. **Seed Database**
-```bash
-cd backend
-npm run quick-seed
-```
-
-4. **Start Services**
+2. **Start Services**
 ```bash
 # Terminal 1 - Backend
 cd backend
-npm start
+npm run dev
 
 # Terminal 2 - Frontend
 cd frontend
@@ -173,6 +180,12 @@ npm start
 - **Backend API**: http://localhost:8000
 - **API Health Check**: http://localhost:8000/api/test
 - **Database Test**: http://localhost:8000/api/test-db
+
+### 📖 Setup Documentation
+- **Quick Start**: [QUICK-START.md](QUICK-START.md) - Fast setup guide
+- **Detailed Guide**: [MONGODB-SETUP.md](MONGODB-SETUP.md) - Complete documentation
+- **Step-by-Step**: [SETUP-INSTRUCTIONS.txt](SETUP-INSTRUCTIONS.txt) - Plain text instructions
+- **Checklist**: [CHECKLIST.md](CHECKLIST.md) - Verify your setup
 
 ---
 

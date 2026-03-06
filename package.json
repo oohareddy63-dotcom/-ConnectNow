@@ -1,0 +1,14 @@
+{
+  "name": "connectnow",
+  "version": "1.0.0",
+  "description": "Video conferencing application with MongoDB",
+  "type": "module",
+  "scripts": {
+    "verify": "node verify-setup.js",
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev": "echo Please use start-dev.bat or start-dev.ps1 to start both servers"
+  },
+  "keywords": ["video", "conferencing", "webrtc", "mongodb"],
+  "author": "",
+  "license": "ISC"
+}
