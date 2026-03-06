@@ -140,8 +140,6 @@ setup-complete.bat
    - Open `backend/.env`
    - Replace `<db_password>` with your MongoDB Atlas password
    ```
-   MONGO_URI=mongodb+srv://oohareddy6362_db_user:YOUR_PASSWORD@connectnow.g1feftw.mongodb.net/connectnow?retryWrites=true&w=majority&appName=Connectnow
-   ```
 
 2. **Whitelist Your IP** (MongoDB Atlas)
    - Go to MongoDB Atlas → Network Access
@@ -311,28 +309,6 @@ npm install -g pm2
 # Start production server
 cd backend
 npm run prod
-```
-
-#### 2. **Docker Deployment**
-```dockerfile
-# Dockerfile for backend
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
-COPY . .
-EXPOSE 8000
-CMD ["npm", "start"]
-```
-
-#### 3. **Cloud Platforms**
-- **AWS EC2** - Scalable compute instances
-- **Google Cloud Platform** - Managed Kubernetes
-- **Azure App Service** - Fully managed platform
-- **Heroku** - Easy deployment with Git
-- **Render** - Modern deployment platform
-
----
 
 ## 🛡️ Security Features
 
@@ -398,74 +374,6 @@ We welcome contributions! Please follow our guidelines:
 - Add tests for new features
 - Update documentation
 - Ensure code coverage > 80%
-
----
-
-## 📝 License
-
-This project is licensed under the **ISC License** - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🆘 Troubleshooting
-
-### Common Issues
-
-#### MongoDB Connection
-```bash
-# Start MongoDB locally
-mongod --dbpath ./data --port 27017
-
-# Check connection
-mongo --eval "db.adminCommand('ismaster')"
-```
-
-#### Port Conflicts
-```bash
-# Kill processes on ports
-netstat -tulpn | grep :8000
-kill -9 <PID>
-```
-
-#### Dependency Issues
-```bash
-# Clear npm cache
-npm cache clean --force
-
-# Reinstall dependencies
-rm -rf node_modules package-lock.json
-npm install
-```
-
----
-
----
-
-## 🗺️ Roadmap
-
-### 🚀 Upcoming Features
-- [ ] **AI-powered Background Blur**
-- [ ] **Virtual Backgrounds**
-- [ ] **Meeting Transcription**
-- [ ] **Breakout Rooms**
-- [ ] **Polls & Q&A**
-- [ ] **Whiteboard Collaboration**
-- [ ] **File Sharing**
-- [ ] **Calendar Integration**
-- [ ] **Mobile Apps (iOS/Android)**
-- [ ] **API Rate Limiting Dashboard**
-- [ ] **Advanced Analytics**
-- [ ] **Multi-language Support**
-
-### 🎯 Long-term Vision
-- **Enterprise SSO Integration**
-- **HIPAA Compliance**
-- **End-to-end Encryption**
-- **Global CDN Integration**
-- **AI Meeting Assistant**
-- **VR Meeting Support**
-
----
 
 ## 🏆 Acknowledgments
 
