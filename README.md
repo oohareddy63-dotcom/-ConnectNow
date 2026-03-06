@@ -140,8 +140,6 @@ setup-complete.bat
    - Open `backend/.env`
    - Replace `<db_password>` with your MongoDB Atlas password
    ```
-   MONGO_URI=mongodb+srv://oohareddy6362_db_user:YOUR_PASSWORD@connectnow.g1feftw.mongodb.net/connectnow?retryWrites=true&w=majority&appName=Connectnow
-   ```
 
 2. **Whitelist Your IP** (MongoDB Atlas)
    - Go to MongoDB Atlas → Network Access
