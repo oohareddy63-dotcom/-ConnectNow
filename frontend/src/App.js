@@ -11,8 +11,6 @@ function App() {
     <div className="App">
       <Router>
         <AuthProvider>
-
-
           <Routes>
 
             <Route path='/' element={<LandingPage />} />
