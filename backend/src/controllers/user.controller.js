@@ -8,6 +8,7 @@ const login = async (req, res) => {
     if (!username || !password) {
         return res.status(400).json({ message: "Please Provide" })
     }
+    
     try {
         const user = await User.findOne({ username });
         if (!user) {
